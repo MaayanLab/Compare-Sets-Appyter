@@ -1,0 +1,12 @@
+{% extends "biojupies/form.j2" %}
+
+{% block script %}
+<script>
+function addFields(name) {
+  // NOTE: ignore file uploads for now as that is a lot more problematic
+  // TODO: `#_${name}_container` is where you should 'render' your new fields
+  // TODO: you *must* populate `#${this.args.name}`'s value with a json representation of the input data,
+  //       [["a", "b", "c"], ["d", "e", "f"]]
+}
+</script>
+{% endblock %}

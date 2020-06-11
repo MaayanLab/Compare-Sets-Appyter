@@ -1,0 +1,20 @@
+<div class="form-group">
+  <p>{{ this.args.description }}</p>
+  <label for="{{ this.args.name }}">
+    {{ this.args.label }}
+  </label>
+  {# what the user sees #}
+  <div
+    id="_{{ this.args.name }}_container"
+    class="expandable-text-area-list"
+  >
+  </div>
+  <a href="javascript:addFields('{{ this.args.name }}')">Add</a>
+  {# hidden field containing result #}
+  <input
+    id="{{ this.args.name }}"
+    name="{{ this.args.name }}"
+    type="value"
+    style="display: none"
+  />
+</div>
