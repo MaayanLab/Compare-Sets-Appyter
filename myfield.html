@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type='text/javascript'>
+            function addFields() {
+                var num = document.getElementById("num").value;
+                var container = document.getElementById("container");
+                while (container.hasChildNodes()) {
+                    container.removeChild(container.lastChild);
+                }
+                for (i=0; i< num; i++) {
+
+                    container.appendChild(document.createTextNode("Gene Set " + (i+1)));
+                    container.appendChild(document.createElement("br"));
+
+                    var input = document.createElement("textarea");
+                    var file = document.createElement("INPUT");
+                    
+                    input.rows = "10";
+                    input.cols = "30";
+                    file.setAttribute("type", "file")
+                    input.name = "num" + i;
+                    file.name = "fnum" + i;
+                    
+                    container.appendChild(file);
+                    container.appendChild(document.createElement("br"));
+
+                    container.appendChild(input);
+                    container.appendChild(document.createElement("br"));
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        
+        Number of Sets: 
+        <input type = "number" id = "num" name = "num" min=2 max =3> <br />
+        <a href = "#" id="set" onclick="addFields()">Set</a>
+        <div id = "container">
+        </div>
+    </body>
+
+</html>
